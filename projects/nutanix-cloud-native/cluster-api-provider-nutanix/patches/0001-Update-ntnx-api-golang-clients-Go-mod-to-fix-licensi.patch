@@ -7,27 +7,24 @@ The nutanix/ntnx-api-golang-clients Go module imported by CAPX was previously un
 proprietary license, but it has now been re-licensed to Apache-2.0, so this patch updates the
 Go mod to the commit that includes the license change.
 
-The go.keploy.io/server module version v0.8.6 had a Go mod checksum error possibly due to recreating
-the tag, v0.7.19 was the latest one that was didn't error out.
-
 Signed-off-by: Abhay Krishna Arunachalam <arnchlm@amazon.com>
 ---
- go.mod | 25 ++++++++++++++++++++++---
- go.sum | 28 ++++++++++++++--------------
- 2 files changed, 36 insertions(+), 17 deletions(-)
+ go.mod | 25 +++++++++++++++++++++++++
+ go.sum | 12 ++++++------
+ 2 files changed, 31 insertions(+), 6 deletions(-)
 
 diff --git a/go.mod b/go.mod
 index e289515..0a06d06 100644
 --- a/go.mod
 +++ b/go.mod
 @@ -11,7 +11,7 @@ require (
- 	github.com/google/go-cmp v0.6.0
+ 	github.com/google/go-cmp v0.7.0
  	github.com/google/uuid v1.6.0
  	github.com/nutanix-cloud-native/prism-go-client v0.5.0
 -	github.com/nutanix/ntnx-api-golang-clients/volumes-go-client/v4 v4.0.1-beta.1
 +	github.com/nutanix/ntnx-api-golang-clients/volumes-go-client/v4 v4.0.2-0.20241207000612-2252cbaf6ae9
- 	github.com/onsi/ginkgo/v2 v2.19.1
- 	github.com/onsi/gomega v1.34.0
+ 	github.com/onsi/ginkgo/v2 v2.23.4
+ 	github.com/onsi/gomega v1.36.3
  	github.com/pkg/errors v0.9.1
 @@ -113,9 +113,9 @@ require (
  	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
@@ -101,7 +98,7 @@ index e1c1282..8efb7d8 100644
 +github.com/nutanix/ntnx-api-golang-clients/volumes-go-client/v4 v4.0.2-0.20241207000612-2252cbaf6ae9/go.mod h1:Z+RKLwsHYxAcFbZPy2ft3QAK9kBPt9bQdqXSp7eYWkY=
  github.com/oklog/ulid v1.3.1 h1:EGfNDEx6MqHz8B3uNV6QAib1UR2Lm97sHi3ocA6ESJ4=
  github.com/oklog/ulid v1.3.1/go.mod h1:CirwcVhetQ6Lv90oh/F+FBtV6XMibvdAFo93nm5qn4U=
- github.com/onsi/ginkgo/v2 v2.19.1 h1:QXgq3Z8Crl5EL1WBAC98A5sEBHARrAJNzAmMxzLcRF0=
+ github.com/onsi/ginkgo/v2 v2.23.4 h1:ktYTpKJAVZnDT4VjxSbiBenUjmlL/5QkBEocaWXiQus=
 @@ -389,8 +389,8 @@ go.etcd.io/etcd/raft/v3 v3.5.10 h1:cgNAYe7xrsrn/5kXMSaH8kM/Ky8mAdMqGOxyYwpP0LA=
  go.etcd.io/etcd/raft/v3 v3.5.10/go.mod h1:odD6kr8XQXTy9oQnyMPBOr0TVe+gT0neQhElQ6jbGRc=
  go.etcd.io/etcd/server/v3 v3.5.10 h1:4NOGyOwD5sUZ22PiWYKmfxqoeh72z6EhYjNosKGLmZg=
@@ -115,4 +112,3 @@ index e1c1282..8efb7d8 100644
  go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.49.0 h1:4Pp6oUg3+e/6M4C0A/3kJ2VYa++dsWVTtGgLVj5xtHg=
 -- 
 2.49.0
-
